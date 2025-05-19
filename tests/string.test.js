@@ -1,4 +1,4 @@
-const {concat, rmspace} = require('../src/string');
+const {concat, rmspace, capitols} = require('../src/string');
 
 
 test('concat "ciao" + "ciao" to equal "ciaociao"', ()=>{
@@ -15,4 +15,16 @@ test('remove space from "ciao ciao" to equal "ciao"', ()=>{
 
 test('remove space from "  ciao  " to equal "ciao"', ()=>{
     expect(rmspace("  ciao  ")).toBe("ciao");
+});
+
+test('Upper case of "ciao" to equal "CIAO"', ()=>{
+    expect(capitols("ciao")).toBe("CIAO");
+});
+
+test('Upper case of "cane" to equal "CANE"', ()=>{
+    expect(capitols("cane")).toBe("CANE");
+});
+
+test('Upper case of "CANE" to equal "CANE"', ()=>{
+    expect(capitols("CANE")).toBe("CANE");
 });
