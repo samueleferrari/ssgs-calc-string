@@ -1,5 +1,5 @@
 const readline = require('readline');
-const {concat, rmspace, capitols} = require('./string');
+const {concat, rmspace, capitols, lowercase} = require('./string');
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -21,6 +21,7 @@ async function Operation() {
         console.log("1. Concatenation");
         console.log("2. Remove space");
         console.log("3. Upper case");
+        console.log("4. Lower case");
         console.log("0. Exit");
 
         const choice = await askQuestion("Enter your choice: ");
@@ -31,7 +32,7 @@ async function Operation() {
             rl.close();
             break;
         }
-        else if(choice > 3 || choice < 1){
+        else if(choice > 4 || choice < 1){
             console.log("Invalid choice. Please try again.");
             continue;
         }
@@ -49,6 +50,9 @@ async function Operation() {
                 break;
             case '3':
                 result = capitols(firstString);
+                break;
+            case '4':
+                result = lowercase(firstString);
                 break;
             default:
                 console.log("Invalid choice. Please select a valid operation.");
