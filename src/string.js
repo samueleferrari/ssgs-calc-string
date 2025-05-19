@@ -6,4 +6,8 @@ function rmspace(a){
     return a.replace(/\s+/g, ''); 
 }
 
-module.exports = {concat, rmspace};
+function capitols(a){
+    return a.toUpperCase();
+}
+
+module.exports = {concat, rmspace, capitols};
