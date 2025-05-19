@@ -10,4 +10,8 @@ function capitols(a){
     return a.toUpperCase();
 }
 
-module.exports = {concat, rmspace, capitols};
+function lowercase(a){
+    return a.toLowerCase();
+}
+
+module.exports = {concat, rmspace, capitols, lowercase};
