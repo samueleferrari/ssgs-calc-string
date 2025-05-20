@@ -6,6 +6,8 @@ This is a simple string calculator that can perform basic arithmetic operations 
 ## Features 🚀
 - concatenation 
 - space remove 
+- Upper case
+- Lower case
 
 ## Installation ⚙️
 This software works with [node.js](https://nodejs.org) **v22.15.1** or higher so make sure to have it installed using 
